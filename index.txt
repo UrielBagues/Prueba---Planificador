@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Trillis</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --color-primary: #FF3F72;
+      --color-secondary: #48B070;
+      --color-text: #1f1f1f;
+      --color-bg: #ffffff;
+      --color-soft: #f7f7f9;
+
+      --font-main: 'Roboto', system-ui, sans-serif;
+      --radius: 18px;
+      --shadow: 0 12px 30px rgba(0,0,0,.08);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font-main);
+      color: var(--color-text);
+      background: var(--color-bg);
+      line-height: 1.6;
+    }
+
+    /* ================= HERO ================= */
+    header {
+      min-height: 100vh;
+      background: linear-gradient(
+        135deg,
+        var(--color-primary),
+        #ff6a92
+      );
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    header h1 {
+      font-size: clamp(2.6rem, 5vw, 3.8rem);
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
+
+    header p {
+      max-width: 650px;
+      margin: 0 auto 34px;
+      font-size: 1.15rem;
+      opacity: .95;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 40px;
+      border-radius: 999px;
+      background: white;
+      color: var(--color-primary);
+      text-decoration: none;
+      font-weight: 600;
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 16px 40px rgba(0,0,0,.25);
+    }
+
+    /* ================= SECTIONS ================= */
+    section {
+      padding: 90px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    section h2 {
+      text-align: center;
+      font-size: 2.3rem;
+      margin-bottom: 42px;
+    }
+
+    .soft {
+      background: var(--color-soft);
+    }
+
+    /* ================= ABOUT ================= */
+    .about p {
+      max-width: 760px;
+      margin: auto;
+      text-align: center;
+      font-size: 1.1rem;
+    }
+
+    /* ================= SERVICES ================= */
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 28px;
+    }
+
+    .card {
+      background: white;
+      padding: 34px;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      text-align: center;
+      transition: transform .25s ease, box-shadow .25s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 45px rgba(0,0,0,.12);
+    }
+
+    .card h3 {
+      margin-bottom: 14px;
+      color: var(--color-primary);
+    }
+
+    /* ================= CONTACT ================= */
+    form {
+      max-width: 520px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    input, textarea {
+      padding: 14px 16px;
+      border-radius: 12px;
+      border: 1px solid #ccc;
+      font-family: inherit;
+      font-size: 1rem;
+    }
+
+    input:focus, textarea:focus {
+      outline: none;
+      border-color: var(--color-secondary);
+    }
+
+    button {
+      padding: 14px;
+      border-radius: 12px;
+      border: none;
+      background: var(--color-secondary);
+      color: white;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background .2s ease;
+    }
+
+    button:hover {
+      background: #3fa164;
+    }
+
+    /* ================= FOOTER ================= */
+    footer {
+      background: #111;
+      color: #bbb;
+      text-align: center;
+      padding: 30px 20px;
+      font-size: .9rem;
+    }
+
+    /* ================= ANIMATIONS ================= */
+    .fade {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all .7s ease;
+    }
+
+    .fade.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="fade">
+    <h1>Trillis</h1>
+    <p>
+      Una experiencia digital clara, moderna y enfocada en convertir.
+      Diseño que comunica sin explicar de más.
+    </p>
+    <a href="#about" class="btn">Conocer más</a>
+  </div>
+</header>
+
+<section id="about" class="soft fade about">
+  <h2>Sobre nosotros</h2>
+  <p>
+    Creamos soluciones visuales y funcionales que priorizan claridad,
+    coherencia de marca y experiencia de usuario.
+    Menos ruido. Más impacto.
+  </p>
+</section>
+
+<section class="fade">
+  <h2>Qué hacemos</h2>
+  <div class="services">
+    <div class="card">
+      <h3>Estrategia</h3>
+      <p>Diseño pensado para comunicar valor desde el primer segundo.</p>
+    </div>
+    <div class="card">
+      <h3>Diseño</h3>
+      <p>Interfaces limpias, modernas y alineadas a tu identidad.</p>
+    </div>
+    <div class="card">
+      <h3>Resultados</h3>
+      <p>Menos distracciones, más foco en la conversión.</p>
+    </div>
+  </div>
+</section>
+
+<section class="soft fade">
+  <h2>Contacto</h2>
+  <form>
+    <input type="text" placeholder="Nombre" />
+    <input type="email" placeholder="Email" />
+    <textarea rows="4" placeholder="Mensaje"></textarea>
+    <button type="submit">Enviar mensaje</button>
+  </form>
+</section>
+
+<footer>
+  © 2026 Trillis · Publicado con GitHub Pages
+</footer>
+
+<script>
+  const elements = document.querySelectorAll('.fade');
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+      }
+    });
+  }, { threshold: 0.2 });
+
+  elements.forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
